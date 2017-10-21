@@ -30,5 +30,6 @@ public class Driver {
 		entityManager.persist(appUsers);
 		entityManager.getTransaction().commit();
 		entityManager.close();
+		
 	}
 }
