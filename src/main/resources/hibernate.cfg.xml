@@ -31,6 +31,9 @@
       
         <mapping class="hibernate.firstexample.entity.Message"/>
         <mapping class="hibernate.component.entity.Person"/>
+        <mapping class="hibernate.associations.entity.Guide"/>
+        <mapping class="hibernate.associations.entity.Student"/>
+        
         
     </session-factory>
 </hibernate-configuration>

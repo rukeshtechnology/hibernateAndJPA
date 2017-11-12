@@ -710,3 +710,25 @@
 20:50:39,464 TRACE BasicBinder:65 - binding parameter [2] as [BIGINT] - [1]
 20:51:06,252 DEBUG SQL:92 - insert into message (TEXT) values (?)
 20:51:06,265 TRACE BasicBinder:65 - binding parameter [1] as [VARCHAR] - [Hello World with Hibernate & JPA Annotations 23]
+21:28:46,483 DEBUG SQL:92 - insert into message (TEXT) values (?)
+21:28:46,492 TRACE BasicBinder:65 - binding parameter [1] as [VARCHAR] - [Hello World with Hibernate & JPA Annotations 23]
+21:33:08,817 DEBUG SQL:92 - select next_val as id_val from hibernate_sequence for update
+21:49:31,680 DEBUG SQL:92 - select next_val as id_val from hibernate_sequence for update
+21:50:49,827 DEBUG SQL:92 - insert into Person (address_city, address_street, address_zipcode, name) values (?, ?, ?, ?)
+21:50:49,839 TRACE BasicBinder:65 - binding parameter [1] as [VARCHAR] - [Chantilly]
+21:50:49,840 TRACE BasicBinder:65 - binding parameter [2] as [VARCHAR] - [24913 Earlsford Dr]
+21:50:49,840 TRACE BasicBinder:65 - binding parameter [3] as [VARCHAR] - [20152]
+21:50:49,840 TRACE BasicBinder:65 - binding parameter [4] as [VARCHAR] - [Rukesh Tamrakar]
+00:34:56,373 DEBUG SQL:92 - select next_val as id_val from hibernate_sequence for update
+00:35:55,538 DEBUG SQL:92 - insert into Guide (name, salary, staff_id) values (?, ?, ?)
+00:35:55,551 TRACE BasicBinder:65 - binding parameter [1] as [VARCHAR] - [Mike Lawson]
+00:35:55,551 TRACE BasicBinder:65 - binding parameter [2] as [INTEGER] - [1000]
+00:35:55,551 TRACE BasicBinder:65 - binding parameter [3] as [VARCHAR] - [2000MO10789]
+12:12:54,369 DEBUG SQL:92 - insert into Guide (name, salary, staff_id) values (?, ?, ?)
+12:12:54,373 TRACE BasicBinder:65 - binding parameter [1] as [VARCHAR] - [Mike Lawson]
+12:12:54,373 TRACE BasicBinder:65 - binding parameter [2] as [INTEGER] - [1000]
+12:12:54,373 TRACE BasicBinder:65 - binding parameter [3] as [VARCHAR] - [2000MO10789]
+12:12:54,373 DEBUG SQL:92 - insert into Student (enrollment_id, guide_id, name) values (?, ?, ?)
+12:12:54,373 TRACE BasicBinder:65 - binding parameter [1] as [VARCHAR] - [2014JT50123]
+12:12:54,373 TRACE BasicBinder:65 - binding parameter [2] as [BIGINT] - [1]
+12:12:54,373 TRACE BasicBinder:65 - binding parameter [3] as [VARCHAR] - [John Smith]
