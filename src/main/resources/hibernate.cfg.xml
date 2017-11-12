@@ -30,7 +30,7 @@
         <!-- Use Annotation-based mapping metadata -->
       
         <mapping class="hibernate.firstexample.entity.Message"/>
-                    
+        <mapping class="hibernate.component.entity.Person"/>
         
     </session-factory>
 </hibernate-configuration>
