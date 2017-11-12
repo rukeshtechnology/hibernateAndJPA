@@ -732,3 +732,38 @@
 12:12:54,373 TRACE BasicBinder:65 - binding parameter [1] as [VARCHAR] - [2014JT50123]
 12:12:54,373 TRACE BasicBinder:65 - binding parameter [2] as [BIGINT] - [1]
 12:12:54,373 TRACE BasicBinder:65 - binding parameter [3] as [VARCHAR] - [John Smith]
+17:07:10,810 DEBUG SQL:92 - create table Customer (id bigint not null, name varchar(255), passport_id bigint, primary key (id)) type=MyISAM
+17:07:10,819 DEBUG SQL:92 - create table hibernate_sequence (next_val bigint) type=MyISAM
+17:07:10,819 DEBUG SQL:92 - insert into hibernate_sequence values ( 1 )
+17:07:10,819 DEBUG SQL:92 - insert into hibernate_sequence values ( 1 )
+17:07:10,819 DEBUG SQL:92 - create table Passport (id bigint not null, passport_number varchar(255), primary key (id)) type=MyISAM
+17:07:10,819 DEBUG SQL:92 - alter table Customer drop index UK_eqsqcfe0n0al6jf5ewnx392nl
+17:07:10,819 DEBUG SQL:92 - alter table Customer add constraint UK_eqsqcfe0n0al6jf5ewnx392nl unique (passport_id)
+17:07:10,819 DEBUG SQL:92 - alter table Customer add constraint FK55lqk21ofiw00596jpwlc0r07 foreign key (passport_id) references Passport (id)
+17:07:10,869 DEBUG SQL:92 - alter table Student add constraint FKb4ny3l3cnsxbbn601ev8mhlj5 foreign key (guide_id) references Guide (guide_id)
+17:07:11,595 DEBUG SQL:92 - select next_val as id_val from hibernate_sequence for update
+17:21:12,929 DEBUG SQL:92 - create table hibernate_sequence (next_val bigint) type=MyISAM
+17:21:12,934 DEBUG SQL:92 - insert into hibernate_sequence values ( 1 )
+17:21:12,934 DEBUG SQL:92 - insert into hibernate_sequence values ( 1 )
+17:21:12,950 DEBUG SQL:92 - alter table Customer add constraint FK55lqk21ofiw00596jpwlc0r07 foreign key (passport_id) references Passport (id)
+17:21:13,552 DEBUG SQL:92 - alter table Student add constraint FKb4ny3l3cnsxbbn601ev8mhlj5 foreign key (guide_id) references Guide (guide_id)
+17:21:14,253 DEBUG SQL:92 - select next_val as id_val from hibernate_sequence for update
+17:21:52,383 DEBUG SQL:92 - insert into Passport (passport_number) values (?)
+17:21:52,398 TRACE BasicBinder:65 - binding parameter [1] as [VARCHAR] - [925076473]
+17:21:52,398 DEBUG SQL:92 - insert into Customer (name, passport_id) values (?, ?)
+17:21:52,398 TRACE BasicBinder:65 - binding parameter [1] as [VARCHAR] - [Nicole Scott]
+17:21:52,398 TRACE BasicBinder:65 - binding parameter [2] as [BIGINT] - [1]
+17:23:22,160 DEBUG SQL:92 - create table Customer (id bigint not null auto_increment, name varchar(255), passport_id bigint, primary key (id)) type=MyISAM
+17:23:22,166 DEBUG SQL:92 - create table Passport (id bigint not null auto_increment, passport_number varchar(255), primary key (id)) type=MyISAM
+17:23:22,166 DEBUG SQL:92 - alter table Customer drop index UK_eqsqcfe0n0al6jf5ewnx392nl
+17:23:22,166 DEBUG SQL:92 - alter table Customer add constraint UK_eqsqcfe0n0al6jf5ewnx392nl unique (passport_id)
+17:23:22,166 DEBUG SQL:92 - alter table Customer add constraint FK55lqk21ofiw00596jpwlc0r07 foreign key (passport_id) references Passport (id)
+17:23:22,266 DEBUG SQL:92 - insert into Passport (passport_number) values (?)
+17:23:22,282 TRACE BasicBinder:65 - binding parameter [1] as [VARCHAR] - [925076473]
+17:24:20,712 DEBUG SQL:92 - alter table Customer add constraint FK55lqk21ofiw00596jpwlc0r07 foreign key (passport_id) references Passport (id)
+17:24:21,566 DEBUG SQL:92 - alter table Student add constraint FKb4ny3l3cnsxbbn601ev8mhlj5 foreign key (guide_id) references Guide (guide_id)
+17:24:22,229 DEBUG SQL:92 - insert into Passport (passport_number) values (?)
+17:24:22,240 TRACE BasicBinder:65 - binding parameter [1] as [VARCHAR] - [925076473]
+17:24:22,240 DEBUG SQL:92 - insert into Customer (name, passport_id) values (?, ?)
+17:24:22,240 TRACE BasicBinder:65 - binding parameter [1] as [VARCHAR] - [Nicole Scott]
+17:24:22,240 TRACE BasicBinder:65 - binding parameter [2] as [BIGINT] - [1]

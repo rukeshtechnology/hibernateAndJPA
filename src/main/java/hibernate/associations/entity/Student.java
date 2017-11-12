@@ -27,7 +27,7 @@ public class Student {
 	 * Cascade will tell that when student is saved its associated objects, in this case Guide
 	 * is also saved.
 	 */
-	@ManyToOne(cascade= {CascadeType.PERSIST})
+	@ManyToOne(cascade= {CascadeType.PERSIST, CascadeType.REMOVE})
 	@JoinColumn(name="guide_id")
 	private Guide guide;
 	

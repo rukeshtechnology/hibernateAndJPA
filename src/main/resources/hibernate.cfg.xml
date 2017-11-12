@@ -27,12 +27,16 @@
         <mapping resource="Message.hbm.xml"/>
          -->
         
-        <!-- Use Annotation-based mapping metadata -->
-      
+        <!-- Autogeneration of DDL and table creation -->
+        <property name="hbm2ddl.auto">update</property>
+        
+        <!-- Use Annotation-based mapping metadata -->      
         <mapping class="hibernate.firstexample.entity.Message"/>
         <mapping class="hibernate.component.entity.Person"/>
         <mapping class="hibernate.associations.entity.Guide"/>
         <mapping class="hibernate.associations.entity.Student"/>
+        <mapping class="hibernate.associations.entity.Customer"/>
+        <mapping class="hibernate.associations.entity.Passport"/>
         
         
     </session-factory>
